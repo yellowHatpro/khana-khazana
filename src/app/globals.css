@@ -5,16 +5,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    min-width: fit-content;
     background: #f3ede1;
   }
 }
 
 body {
-  color: #1d2544;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: normal;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 }

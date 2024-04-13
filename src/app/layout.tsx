@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${satoshiFont.variable} ${hiromisakeFont.variable} font-satoshi `}>
+    <html lang="en" className={`${satoshiFont.variable} ${hiromisakeFont.variable} font-satoshi`}>
       <body>
         <Navbar/>
       {children}
