@@ -4,6 +4,7 @@ import CategoryCard from "@/components/category-card";
 import Carousel from "@/components/carousel";
 import {Area} from "@/types/area";
 import getAllAreas from "@/api/getAllAreas";
+import Link from "next/link";
 
 type GetAllCategoriesResponse = {
   categories: Category[]
@@ -25,7 +26,9 @@ export default async function Home() {
                 {areas.map((area, index)=> {
                     return (
                         <h1 className={"text-onPrimary hover:text-amber-700 hover:cursor-pointer font-hiromisake font-black text-xl "} key={index}>
-                            {area.strArea}
+                            <Link href={`/country/${area.strArea}`}>
+                                {area.strArea}
+                            </Link>
                         </h1>
                     )
                 })}
