@@ -1,4 +1,5 @@
 import {LucideShoppingBasket, UserCircle} from "lucide-react";
+import Link from "next/link";
 
 const NAV_ITEMS = [
     "Home",
@@ -10,7 +11,9 @@ const NAV_ITEMS = [
 const Navbar = () => {
     return (
         <nav className={"flex items-center justify-between p-4 border-b border-b-onPrimary w-full text-onTertiary"}>
-            <h1 className={"font-hiromisake"}>Khana Khazana</h1>
+            <Link href={"/"}>
+                <h1 className={"font-hiromisake"}>Khana Khazana</h1>
+            </Link>
             <ul className={"flex child:mx-4 font-semibold"}>
                 {NAV_ITEMS.map((item,index)=>{
                     return(
