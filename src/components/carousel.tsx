@@ -18,7 +18,7 @@ const Carousel = ({items}: CarouselArray) => {
         }, 10000))
     }, [items.length]);
     return (
-        <div className={"border border-tertiary rounded-xl relative max-w-[512px] w-full h-[500px] duration-200 group justify-between items-center flex flex-col"}>
+        <div className={"border border-tertiary rounded-xl relative max-w-[512px] w-full h-[500px] duration-200 group justify-between items-center flex flex-col text-onTertiary"}>
             <Image priority
                    className={"w-80"}
                    src={items[currentIndex].strCategoryThumb}

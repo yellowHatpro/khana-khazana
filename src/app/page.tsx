@@ -19,7 +19,7 @@ export default async function Home() {
                     SECTION
                 </h1>
 
-                <div className={"grid grid-cols-4 child:m-2  "}>
+                <div className={"grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 child:m-2  "}>
                     {categories.map((category, index) => {
                         return (
                             <CategoryCard
