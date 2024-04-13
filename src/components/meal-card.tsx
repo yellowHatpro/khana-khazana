@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {Meal} from "@/types/meal";
+import Link from "next/link";
 
 type MealCardProps = {
     meal: Meal
@@ -16,7 +17,10 @@ const MealCard = ({meal}: MealCardProps) => {
             />
             <h1 className={"font-hiromisake text-onTertiary"}>{meal.strMeal}</h1>
             <button
-                className={"text-secondary font-hiromisake border rounded-tl-xl rounded-br-xl border-secondary"}>Explore
+                className={"text-secondary font-hiromisake border rounded-tl-xl rounded-br-xl border-secondary"}>
+                <Link href={`/meal/${meal.strMeal}`} className={"w-full h-full"}>
+                    Explore
+                </Link>
             </button>
         </div>
     )
