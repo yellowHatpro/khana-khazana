@@ -3,7 +3,7 @@ import {Github, Linkedin} from "lucide-react";
 const Footer = () => {
     return (
         <section className={"bg-tertiary text-white flex items-center justify-between p-4"}>
-            <div>Khana Khazana</div>
+            <div className={"font-hiromisake"}>Khana Khazana</div>
             <div className={"flex child:m-2"}>
                 <div>HOME</div>
                 <div>MENU</div>

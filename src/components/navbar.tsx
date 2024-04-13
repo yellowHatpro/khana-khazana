@@ -1,17 +1,31 @@
+import {LucideShoppingBasket, UserCircle} from "lucide-react";
+
+const NAV_ITEMS = [
+    "Home",
+    "Menu",
+    "About",
+    "More"
+]
+
 const Navbar = () => {
     return (
-        <nav>
-            <h1>Khana Khazana</h1>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Menu</li>
-                    <li>About</li>
-                    <li>Sessions</li>
-                </ul>
-            </nav>
+        <nav className={"flex items-center justify-between p-4 border-b border-b-onPrimary"}>
+            <h1 className={"font-hiromisake"}>Khana Khazana</h1>
+            <ul className={"flex child:mx-4 font-semibold"}>
+                {NAV_ITEMS.map((item,index)=>{
+                    return(
+                        <li key={index}>
+                            <h1>{item}</h1>
+                        </li>
+                    )
+                })}
+            </ul>
+            <div className={"flex child:m-2"}>
+                <LucideShoppingBasket/>
+                <UserCircle/>
+            </div>
         </nav>
     );
-};
+}
 
 export default Navbar

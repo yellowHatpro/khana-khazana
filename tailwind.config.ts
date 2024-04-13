@@ -16,7 +16,8 @@ const config: Config = {
       colors: {
         primary: "#f3ede1",
         secondary: "#e56e0c",
-        tertiary: "#1d2544"
+        tertiary: "#1d2544",
+        onPrimary: "#E9DAC6"
       },
       fontFamily: {
         satoshi: ['var(--font-satoshi)'],
