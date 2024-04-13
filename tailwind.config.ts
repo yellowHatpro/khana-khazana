@@ -13,8 +13,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#f3ede1",
+        secondary: "#e56e0c",
+        tertiary: "#1d2544"
+      },
+      fontFamily: {
+        satoshi: ['var(--font-satoshi)'],
+        hiromisake: ['var(--font-hiromisake)']
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }: any) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+    }
+  ],
 };
 export default config;
